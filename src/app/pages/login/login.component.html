@@ -2,6 +2,27 @@
     title="Entrar | Cadastrar"
     botaoPrimario="Entrar"
     botaoSecundario="Cadastrar"
+    (submit)="submit()"
 >
+
+    <form [formGroup]="loginForm">
+        <app-input-primario
+            formControlName="email"
+            inputName="email"
+            type="email"
+            label="Email"
+            placeholder="exemplo@gmail.com"
+        >
+
+        </app-input-primario>
+            <app-input-primario
+            formControlName="senha"
+            inputName="senha"
+            type="senha"
+            label="Sua senha"
+        >
+    </app-input-primario>
+    <span>Esqueceu sua senha?</span>
+    </form>
 
 </app-default-login-layout>
