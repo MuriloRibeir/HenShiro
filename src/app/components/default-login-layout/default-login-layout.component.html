@@ -4,7 +4,7 @@
         <h2>{{ title }}</h2>
         <ng-content></ng-content>
         <div class="grupo-botoes">
-            <button class="botao-primario">{{ botaoPrimario }}</button>
+            <button class="botao-primario" (click)="submit()">{{ botaoPrimario }}</button>
             <div class="divisor">
                 <div class="barra-divisao"></div>
                 <span>ou</span>
@@ -15,6 +15,6 @@
     </section>
     <section class="main-section">
         <h1>HenShiro, seja bem-vindo!</h1>
-        <img class="imagem-main" src="ilustracao.jpeg">
+        <!--<img class="imagem-main" src="ilustracao.jpeg">-->
     </section>
 </main>
