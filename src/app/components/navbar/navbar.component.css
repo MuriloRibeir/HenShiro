@@ -1,0 +1,42 @@
+.dark-mode body {
+    background-color: #1c1c1c;
+    color: #ffffff;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #2a2a2a;
+    border-bottom: 1px solid #777;
+  }
+  
+  .search-bar {
+    flex: 1;
+    max-width: 500px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: #333;
+    border: 1px solid #777;
+    color: white;
+    border-radius: 6px;
+    margin-right: 1rem;
+  }
+  
+  button, .profile-button {
+    background-color: #444;
+    border: 1px solid #777;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .dark-mode .manga-card {
+    background-color: #333;
+  }
+  
+  .dark-mode .manga-card button {
+    background-color: #666;
+  }
