@@ -1,0 +1,37 @@
+<app-default-login-layout 
+    title="Faça seu cadastro"
+    botaoPrimario="Cadastrar"
+    botaoSecundario="Voltar"
+>
+    <form [formGroup]="cadastroForm">
+        <app-input-primario
+            label=""
+            placeholder="Nome de Usuário"
+        >
+        </app-input-primario>
+
+        <app-input-primario
+            formControlName="email"
+            inputName="email"
+            type="email"
+            label=""
+            placeholder="E-mail"
+        >
+        </app-input-primario>
+
+        <app-input-primario
+            formControlName="senha"
+            inputName="senha"
+            type="senha"
+            label=""
+            placeholder="Senha"
+        >
+        </app-input-primario>
+
+        <app-input-primario
+            label=""
+            placeholder="Confirmar senha"
+        >
+        </app-input-primario>
+    </form>
+</app-default-login-layout>
