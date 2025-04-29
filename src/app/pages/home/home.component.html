@@ -5,10 +5,9 @@
   <section class="recomendacoes">
     <h2>Recomendações para Você</h2>
     <div class="manga-grid">
-      <div class="manga-card" *NgFor="let manga of mangas">
+      <div class="manga-card" *ngFor="let manga of mangas">
         <img [src]="manga.imagem" alt="{{ manga.titulo }}" />
         <h3>{{ manga.titulo }}</h3>
-        <button>Ver mais</button>
       </div>
     </div>
   </section>
