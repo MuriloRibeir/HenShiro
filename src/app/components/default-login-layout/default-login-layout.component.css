@@ -1,5 +1,4 @@
 section {
-    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,18 +17,21 @@ main {
     height: 100%;
     gap: 8px;
     flex-grow: 1;
-    background-color: #D3D3D3;
+    /*background-color: #eeebe3;*/
 }
 
 .form-section {
+    height: 100%;
     flex-grow: 0.3;
     padding: 0 35px;
+    background-color: #eeebe3;
 }
 
 h2 {
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 45px;
+    color: #CA0013;
 }
 
 .grupo-botoes {
@@ -54,13 +56,13 @@ button {
 }
 
 .botao-primario {
-    background-color: #808080;
-    color: #FFF0F5;
+    background-color: #CA0013;
+    color: #eeebe3;
 }
 
 .botao-secundario {
-    border: 1px solid #808080;
-    color: #808080;
+    border: 1px solid #CA0013;
+    color: #CA0013;
 }
 
 .divisor {
@@ -70,7 +72,7 @@ button {
     gap: 20px;
     width: 100%;
     font-size: 14px;
-    color: #808080;
+    color: #CA0013;
     font-weight: 400;
     text-transform: uppercase;
 }
@@ -78,7 +80,7 @@ button {
 .barra-divisao {
     flex-grow: 1;
     height: 1px;
-    background-color: #808080;
+    background-color: #CA0013;
 }
 
 .imagem-main {
@@ -88,4 +90,5 @@ button {
 .imagem-logo {
     width: 100px;
     margin-bottom: 30px;
+    padding-top: 10px;
 }
