@@ -5,7 +5,6 @@
 >
     <form [formGroup]="cadastroForm">
         <app-input-primario
-            label=""
             placeholder="Nome de Usuário"
         >
         </app-input-primario>
@@ -14,7 +13,6 @@
             formControlName="email"
             inputName="email"
             type="email"
-            label=""
             placeholder="E-mail"
         >
         </app-input-primario>
@@ -22,15 +20,14 @@
         <app-input-primario
             formControlName="senha"
             inputName="senha"
-            type="senha"
-            label=""
+            type="password"
             placeholder="Senha"
         >
         </app-input-primario>
 
         <app-input-primario
-            label=""
             placeholder="Confirmar senha"
+            type="password"
         >
         </app-input-primario>
     </form>
