@@ -4,7 +4,13 @@
         <h2>{{ title }}</h2>
         <ng-content></ng-content>
         <div class="grupo-botoes">
-            <button class="botao-primario" (click)="submit()">{{ botaoPrimario }}</button>
+            <button 
+                class="botao-primario" 
+                (click)="submit()"
+                [disabled]="disableBotaoPrimario"
+            >    
+                {{ botaoPrimario }}
+            </button>
             <div class="divisor">
                 <div class="barra-divisao"></div>
                 <span>ou</span>

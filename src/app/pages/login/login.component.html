@@ -4,6 +4,7 @@
     botaoSecundario="Cadastrar"
     (submit)="submit()"
     (navigate)="navigate()"
+    [disableBotaoPrimario]="!loginForm.valid"
 >
 
     <form [formGroup]="loginForm">

@@ -10,6 +10,7 @@ export class DefaultLoginLayoutComponent {
   @Input() title: string = "";
   @Input() botaoPrimario: string = "";
   @Input() botaoSecundario: string = "";
+  @Input() disableBotaoPrimario: boolean = true;
   @Output("submit") onSubmit = new EventEmitter();
   @Output("navigate") onNavigate = new EventEmitter();
 
