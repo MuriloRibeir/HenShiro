@@ -33,7 +33,7 @@ export class PlanosComponent implements OnInit {
   carregarPlanos(): void {
     this.planos = [
       {
-        nome: 'Gratuito com \n anúncios',
+        nome: 'Gratuito <br> com anúncios',
         precoMensal: 0,
         biblioteca: 'Parcial',
         resolucao: 'Padrão',
@@ -43,7 +43,7 @@ export class PlanosComponent implements OnInit {
         anuncios: 'Com anúncios',
       },
       {
-        nome: 'Premium para Leitores',
+        nome: 'Premium <br> para Leitores',
         precoMensal: 0,
         biblioteca: 'Total',
         resolucao: 'Alto',
@@ -53,7 +53,7 @@ export class PlanosComponent implements OnInit {
         anuncios: 'Sem anúncios',
       },
       {
-        nome: 'Premium para Criadores',
+        nome: 'Premium <br> para Criadores',
         precoMensal: 0,
         biblioteca: 'Total',
         resolucao: 'Alto',

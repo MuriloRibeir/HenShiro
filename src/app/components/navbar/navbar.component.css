@@ -10,7 +10,7 @@
     height: 100px;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: #CA0013;
+    background-image: linear-gradient(#CA0013, #8d0000, #bb2828 );
   }
   
   .search-bar {

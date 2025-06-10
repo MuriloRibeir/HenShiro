@@ -27,13 +27,14 @@
 }
 
 .plan-header {
-    margin-bottom: 20px;
     text-align: center;
+    background-image: linear-gradient(#CA0013, #8d0000, #bb2828 );
+    border-radius: 10px;
 }
 .plan-header h2 {
+    margin: 20px;
     font-size: 1.5em;
-    margin-bottom: 10px;
-    color: #CA0013;
+    color: white;
 }
 .plan-header p {
     font-size: 0.9em;
@@ -41,9 +42,9 @@
     margin: 0;
 }
 .plan-price {
+    margin-top: 30px;
     font-size: 2.2em;
     font-weight: bold;
-    margin-top: 15px;
     color: #333;
     text-align: center;
 }

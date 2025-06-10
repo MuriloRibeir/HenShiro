@@ -1,6 +1,6 @@
 <div class="plan-card" [class.highlighted]="" [class.selected]="isSelected" (click)="onSelectPlano()">
   <div class="plan-header">
-    <h2>{{ plano.nome }}</h2>
+    <h2 [innerHTML]="plano.nome">{{ plano.nome }}</h2>
   </div>
   <p class="plan-price">R$ {{ plano.precoMensal | number:'1.2-2' }}</p>
   <table class="plan-details-table">
