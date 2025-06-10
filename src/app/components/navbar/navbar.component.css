@@ -7,29 +7,87 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100px;
-    padding-left: 20px;
-    padding-right: 20px;
-    background-image: linear-gradient(#CA0013, #8d0000, #bb2828 );
+    height: 80px;
+    padding: 0 30px;
+    background-color: #CA0013;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
   }
-  
+
+.navbar-logo {
+  height: 50px;
+  object-fit: contain;
+  background-color: #ffffff; 
+}
+
+.search-bar {
+  flex-grow: 1;
+  margin: 0 30px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  font-size: 15px;
+  outline: none;
+  max-width: 400px;
+}
+
+.search-bar::placeholder {
+  color: black;
+}
+
+.navbar-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav-link {
+  text-decoration: none; 
+  font-size: 1.1em;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  transform: translateY(-2px); /*Efeito de levantar*/
+}
+
+.theme-button,
+.profile-button {
+  text-align: center;
+  padding: 10px 18px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    flex-wrap: wrap; 
+    height: auto; 
+    padding: 15px 20px;
+    justify-content: center; 
+    gap: 15px;
+  }
+
+  .navbar-brand,
+  .search-bar,
+  .navbar-nav-links {
+    flex-basis: 100%;
+    justify-content: center; 
+    margin: 5px 0; 
+  }
+
   .search-bar {
-    border-radius: 5px;
-    font-size: 16px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    padding-left: 20px;
-    width: 40%;
+    max-width: 90%; 
   }
-  
-  button, .profile-button {
-    text-align: center;
-    padding: 12px 20px;
-    padding-left: 20px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
+
+  .navbar-nav-links {
+    flex-wrap: wrap;
+    gap: 15px;
   }
+}
 
   .dark-mode .manga-card {
     background-color: #333;

@@ -15,7 +15,7 @@ main {
 
 .main-section {
     height: 100%;
-    gap: 8px;
+    gap: 5px;
     flex-grow: 1;
     /*background-color: #eeebe3;*/
 }
@@ -30,7 +30,7 @@ main {
 h2 {
     font-size: 20px;
     font-weight: bold;
-    margin-bottom: 45px;
+    margin-bottom: 40px;
     color: #CA0013;
 }
 
@@ -92,6 +92,6 @@ button {
 
 .imagem-logo {
     width: 100px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     padding-top: 10px;
 }

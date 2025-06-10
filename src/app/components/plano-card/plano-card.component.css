@@ -28,7 +28,8 @@
 
 .plan-header {
     text-align: center;
-    background-image: linear-gradient(#CA0013, #8d0000, #bb2828 );
+    background-color: #CA0013;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 1);
     border-radius: 10px;
 }
 .plan-header h2 {
