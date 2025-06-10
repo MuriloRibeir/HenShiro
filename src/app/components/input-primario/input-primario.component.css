@@ -1,16 +1,12 @@
 .grupo-input {
-    /*color: ;*/
     font-size: 16px;
     text-align: start;
 }
 
 input {
-    border: none;
     border-radius: 8px;
     background-color: white;
     height: 50px;
-
-    /*color: ;*/
     font-size: 16px;
     padding-top: 12px;
     padding-bottom: 12px;

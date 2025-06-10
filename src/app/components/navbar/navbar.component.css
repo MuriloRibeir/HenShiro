@@ -7,29 +7,27 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    background-color: #2a2a2a;
-    border-bottom: 1px solid #777;
+    height: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #CA0013;
   }
   
   .search-bar {
-    flex: 1;
-    max-width: 500px;
-    padding: 0.5rem;
-    font-size: 1rem;
-    background-color: #333;
-    border: 1px solid #777;
-    color: white;
-    border-radius: 6px;
-    margin-right: 1rem;
+    border-radius: 5px;
+    font-size: 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 20px;
+    width: 40%;
   }
   
   button, .profile-button {
-    background-color: #444;
-    border: 1px solid #777;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
+    text-align: center;
+    padding: 12px 20px;
+    padding-left: 20px;
+    border-radius: 5px;
+    border: none;
     cursor: pointer;
   }
 
