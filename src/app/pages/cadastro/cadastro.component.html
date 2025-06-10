@@ -2,10 +2,16 @@
     title="Faça seu cadastro"
     botaoPrimario="Cadastrar"
     botaoSecundario="Voltar"
+    (submit)="submit()"
+    (navigate)="navigate()"
+    [disableBotaoPrimario]="!cadastroForm.valid"
 >
     <form [formGroup]="cadastroForm">
         <app-input-primario
+            formControlName="name"
+            inputName="name"
             placeholder="Nome de Usuário"
+            type="text"
         >
         </app-input-primario>
 
@@ -19,14 +25,16 @@
 
         <app-input-primario
             formControlName="senha"
-            inputName="senha"
+            inputName="password"
             type="password"
             placeholder="Senha"
         >
         </app-input-primario>
 
         <app-input-primario
-            placeholder="Confirmar senha"
+            formControlName="confirmSenha"
+            inputName="password"
+            placeholder="Confirmar sua senha"
             type="password"
         >
         </app-input-primario>
