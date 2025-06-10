@@ -1,0 +1,19 @@
+<app-navbar></app-navbar>
+
+<main>
+    <section>
+        <h1>Escolha o melhor plano para você</h1>
+
+        <div class="plans-container">
+            <app-plano-card
+                *ngFor="let plano of planos"
+                [plano]="plano"
+                [isSelected]="plano === planoSelecionado"
+                (planoSelected)="selecionarPlano($event)"
+            >
+            </app-plano-card>
+        </div>
+
+        <button class="action-button" (click)="prosseguir()">Próximo</button>
+    </section>
+</main>

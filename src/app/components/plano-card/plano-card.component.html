@@ -1,0 +1,14 @@
+<div class="plan-card" [class.highlighted]="" [class.selected]="isSelected" (click)="onSelectPlano()">
+  <div class="plan-header">
+    <h2>{{ plano.nome }}</h2>
+  </div>
+  <p class="plan-price">R$ {{ plano.precoMensal | number:'1.2-2' }}</p>
+  <table class="plan-details-table">
+    <tr><td>Acesso a biblioteca</td><td>{{ plano.biblioteca }}</td></tr>
+    <tr><td>Resolução</td><td>{{ plano.resolucao }}</td></tr>
+    <tr><td>Aparelhos compatíveis</td><td>{{ plano.aparelhosCompativeis }}</td></tr>
+    <tr><td>Acesso antecipado a novos capitulos</td><td>{{ plano.acessoAntecipado }}</td></tr>
+    <tr><td>Ferramentas de publicação e Monetização</td><td>{{ plano.criadores }}</td></tr>
+    <tr><td>Anúncios</td><td>{{ plano.anuncios }}</td></tr>
+  </table>
+</div>
