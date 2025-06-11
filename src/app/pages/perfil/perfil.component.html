@@ -19,9 +19,6 @@
       <div class="activity-section">
         <h3>Atividade recente</h3>
         <span class="activity-status">{{ perfil!.atividadeRecente.length }} mangas lidos recentemente</span>
-        <span class="activity-online-status" [ngClass]="{'online': perfil?.statusOnline}">
-          {{ perfil?.statusOnline ? 'On-line' : 'Off-line' }}
-        </span>
 
         <div class="activity-list">
           <div *ngFor="let atividade of perfil?.atividadeRecente" class="activity-item">

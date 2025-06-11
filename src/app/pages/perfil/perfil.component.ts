@@ -7,22 +7,19 @@ interface Perfil {
   nomeUsuario: string;
   localizacao: string;
   nivel: number;
-  insigniasDestaque?: string[]; // URLs ou nomes de insígnias para destaque
+  insigniasDestaque?: string[];
   atividadeRecente: {
     titulo: string;
-    tempo: string; // Ex: '73 horas registradas'
-    ultimaVez: string; // Ex: 'jogada pela última vez em 10 de jun.'
+    tempo: string;
+    ultimaVez: string;
     capaUrl: string;
   }[];
   statusOnline: boolean;
   totalInsignias: number;
-  totalMangas: number; // Total de mangas na plataforma
-  mangasFavoritos?: string[]; // Lista de mangas favoritos
-  mangasLidosRecentemente?: string[]; // Lista de mangas lidos recentemente
-  mangasColecao?: string[]; // Lista de mangas que o utilizador coleciona
-  reviews?: string[]; // Reviews do utilizador
-  guias?: string[]; // Guias criados pelo utilizador
-  artes?: string[]; // Artes criadas pelo utilizador
+  totalMangas: number;
+  mangasFavoritos?: string[]; 
+  mangasLidosRecentemente?: string[];
+  mangasColecao?: string[];
 }
 
 @Component({
@@ -38,30 +35,29 @@ export class PerfilComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    // Dados de exemplo para o perfil
     this.perfil = {
-      fotoUrl: 'assets/profile-placeholder.png', // Coloque uma imagem sua aqui
-      nomeUsuario: 'LeitorManga123',
-      localizacao: 'Portugal',
+      fotoUrl: 'profile-placeholder.png',
+      nomeUsuario: 'Guilherme Anthony',
+      localizacao: 'Brasil',
       nivel: 5,
       atividadeRecente: [
         {
           titulo: 'One Piece',
           tempo: '15 capítulos lidos',
           ultimaVez: 'Lido em 10 de jun.',
-          capaUrl: 'assets/one-piece-cover.jpg' // Capa do mangá
+          capaUrl: 'one-piece-cover.jpeg'
         },
         {
           titulo: 'Naruto',
           tempo: '5 horas de leitura',
           ultimaVez: 'Lido em 9 de jun.',
-          capaUrl: 'assets/naruto-cover.jpg' // Capa do mangá
+          capaUrl: 'naruto-cover.jpeg'
         },
         {
           titulo: 'Berserk',
           tempo: '3 capítulos lidos',
           ultimaVez: 'Lido em 8 de jun.',
-          capaUrl: 'assets/berserk-cover.jpg' // Capa do mangá
+          capaUrl: 'berserk-cover.jpeg'
         }
       ],
       statusOnline: true,
@@ -69,10 +65,7 @@ export class PerfilComponent implements OnInit {
       totalMangas: 25,
       mangasFavoritos: ['One Piece', 'Naruto'],
       mangasLidosRecentemente: ['One Piece', 'Naruto', 'Berserk'],
-      mangasColecao: ['One Piece', 'Naruto', 'Berserk', 'Fullmetal Alchemist'],
-      reviews: [], // Deixe vazio por enquanto
-      guias: [], // Deixe vazio por enquanto
-      artes: [] // Deixe vazio por enquanto
+      mangasColecao: ['One Piece', 'Naruto', 'Berserk', 'Fullmetal Alchemist']
     };
   }
 }

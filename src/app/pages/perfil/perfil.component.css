@@ -1,14 +1,10 @@
 .profile-page-container {
   display: flex;
   flex-direction: column;
-  background-color: #f4f4f4; /* Fundo mais claro para um site de manga */
-  color: #333; /* Cor do texto mais escura */
+  background-color: #eeebe3;
   padding: 20px;
-  min-height: calc(100vh - 80px); /* Ajustar altura para preencher a tela, descontando o navbar */
-  font-family: Arial, sans-serif;
 }
 
-/* Cabeçalho do Perfil */
 .profile-header {
   display: flex;
   background-color: #fff;
@@ -17,6 +13,7 @@
   margin-bottom: 20px;
   gap: 30px;
   align-items: flex-start;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .profile-avatar-area {
@@ -31,7 +28,7 @@
 .profile-avatar {
   width: 100px;
   height: 100px;
-  border-radius: 50%; /* Avatar circular */
+  border-radius: 50%;
   object-fit: cover;
   border: 2px solid #ddd;
 }
@@ -50,7 +47,6 @@
   flex-grow: 1;
   background-color: #fff;
   padding: 15px;
-  border-radius: 8px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -68,22 +64,21 @@
 }
 
 .edit-profile-button {
-  background-color: #007bff; /* Azul vibrante */
-  color: #fff;
+  background-color: #CA0013;
+  color: white;
   padding: 8px 15px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   font-size: 0.9em;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.3s ease;
   align-self: flex-start;
 }
 
 .edit-profile-button:hover {
-  background-color: #0056b3;
+  background-color: #c4312f;
 }
 
-/* Wrapper de Conteúdo Principal e Sidebar */
 .profile-content-wrapper {
   display: flex;
   gap: 20px;
@@ -108,6 +103,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Seções de Conteúdo (Atividade, Favoritos) */
@@ -117,6 +113,7 @@
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .activity-section h3,
@@ -125,26 +122,8 @@
   font-size: 1.2em;
   margin-bottom: 15px;
   border-bottom: 1px solid #ddd;
+  color: #CA0013;
   padding-bottom: 10px;
-}
-
-.activity-status {
-  font-size: 0.9em;
-  color: #777;
-  margin-right: 10px;
-}
-
-.activity-online-status {
-  background-color: #6c757d; /* Cinza para off-line */
-  color: #fff;
-  padding: 3px 8px;
-  border-radius: 15px;
-  font-size: 0.8em;
-  float: right;
-}
-
-.activity-online-status.online {
-  background-color: #28a745; /* Verde para online */
 }
 
 .activity-list {
@@ -156,7 +135,7 @@
   align-items: center;
   gap: 15px;
   margin-bottom: 15px;
-  background-color: #f9f9f9;
+  background-color: #eeebe3;
   padding: 10px;
   border-radius: 5px;
 }
@@ -180,8 +159,8 @@
 }
 
 .view-more-button {
-  background-color: #007bff; /* Azul vibrante */
-  color: #fff;
+  background-color: #CA0013; 
+  color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -193,10 +172,9 @@
 }
 
 .view-more-button:hover {
-  background-color: #0056b3;
+  background-color: #c4312f;
 }
 
-/* Mangas Favoritos */
 .favorites-list {
   display: flex;
   gap: 10px;
@@ -210,7 +188,6 @@
   font-size: 0.9em;
 }
 
-/* Sidebar */
 .sidebar-block h4 span {
   float: right;
   color: #777;
@@ -237,7 +214,7 @@
 }
 
 .sidebar-block ul li a:hover {
-  color: #007bff;
+  color: #c4312f;
   text-decoration: underline;
 }
 
