@@ -1,0 +1,58 @@
+<app-navbar></app-navbar>
+
+<div class="profile-page-container">
+  <div class="profile-header">
+    <div class="profile-avatar-area">
+      <img [src]="perfil?.fotoUrl || 'assets/default-avatar.png'" alt="Avatar do Usuário" class="profile-avatar" />
+      <span class="profile-username">{{ perfil?.nomeUsuario }}</span>
+      <span class="profile-location">{{ perfil?.localizacao }}</span>
+    </div>
+    <div class="profile-level">
+      Nível {{ perfil?.nivel }}
+      <p>Veja os seus mangas favoritos e a sua atividade recente.</p>
+      <button class="edit-profile-button">Editar perfil</button>
+    </div>
+  </div>
+
+  <div class="profile-content-wrapper">
+    <div class="profile-main-content">
+      <div class="activity-section">
+        <h3>Atividade recente</h3>
+        <span class="activity-status">{{ perfil!.atividadeRecente.length }} mangas lidos recentemente</span>
+        <span class="activity-online-status" [ngClass]="{'online': perfil?.statusOnline}">
+          {{ perfil?.statusOnline ? 'On-line' : 'Off-line' }}
+        </span>
+
+        <div class="activity-list">
+          <div *ngFor="let atividade of perfil?.atividadeRecente" class="activity-item">
+            <img [src]="atividade.capaUrl" alt="Capa" class="activity-item-cover" />
+            <div class="activity-item-details">
+              <h4>{{ atividade.titulo }}</h4>
+              <p>{{ atividade.tempo }}</p>
+              <p>{{ atividade.ultimaVez }}</p>
+            </div>
+          </div>
+          <button class="view-more-button">Ver todos</button>
+        </div>
+      </div>
+
+      <div class="favorites-section">
+        <h3>Mangas Favoritos</h3>
+        <div class="favorites-list">
+          <div *ngFor="let manga of perfil?.mangasFavoritos" class="favorite-item">
+            {{ manga }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="profile-sidebar">
+      <div class="sidebar-block">
+        <h4>Coleção <span>{{ perfil?.totalMangas }}</span></h4>
+        <ul>
+          <li *ngFor="let manga of perfil?.mangasColecao"><a href="#">{{ manga }}</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

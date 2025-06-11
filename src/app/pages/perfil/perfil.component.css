@@ -1,0 +1,277 @@
+.profile-page-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #f4f4f4; /* Fundo mais claro para um site de manga */
+  color: #333; /* Cor do texto mais escura */
+  padding: 20px;
+  min-height: calc(100vh - 80px); /* Ajustar altura para preencher a tela, descontando o navbar */
+  font-family: Arial, sans-serif;
+}
+
+/* Cabeçalho do Perfil */
+.profile-header {
+  display: flex;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.profile-avatar-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  width: 150px;
+}
+
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Avatar circular */
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+
+.profile-username {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.profile-location {
+  font-size: 0.9em;
+  color: #777;
+}
+
+.profile-level {
+  flex-grow: 1;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile-level h4 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.profile-level p {
+  font-size: 0.9em;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.edit-profile-button {
+  background-color: #007bff; /* Azul vibrante */
+  color: #fff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: background-color 0.2s ease;
+  align-self: flex-start;
+}
+
+.edit-profile-button:hover {
+  background-color: #0056b3;
+}
+
+/* Wrapper de Conteúdo Principal e Sidebar */
+.profile-content-wrapper {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.profile-main-content {
+  flex-grow: 1;
+  flex-basis: 70%;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.profile-sidebar {
+  flex-basis: 25%;
+  min-width: 200px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Seções de Conteúdo (Atividade, Favoritos) */
+.activity-section,
+.favorites-section,
+.sidebar-block {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.activity-section h3,
+.favorites-section h3,
+.sidebar-block h4 {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.activity-status {
+  font-size: 0.9em;
+  color: #777;
+  margin-right: 10px;
+}
+
+.activity-online-status {
+  background-color: #6c757d; /* Cinza para off-line */
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 15px;
+  font-size: 0.8em;
+  float: right;
+}
+
+.activity-online-status.online {
+  background-color: #28a745; /* Verde para online */
+}
+
+.activity-list {
+  margin-top: 15px;
+}
+
+.activity-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.activity-item-cover {
+  width: 60px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+.activity-item-details h4 {
+  font-size: 1em;
+  margin-bottom: 5px;
+}
+
+.activity-item-details p {
+  font-size: 0.8em;
+  color: #555;
+  line-height: 1.3;
+}
+
+.view-more-button {
+  background-color: #007bff; /* Azul vibrante */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+  margin-top: 10px;
+  width: 100%;
+  transition: background-color 0.2s ease;
+}
+
+.view-more-button:hover {
+  background-color: #0056b3;
+}
+
+/* Mangas Favoritos */
+.favorites-list {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.favorite-item {
+  background-color: #f0f0f0;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+
+/* Sidebar */
+.sidebar-block h4 span {
+  float: right;
+  color: #777;
+  font-size: 0.9em;
+}
+
+.sidebar-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-block ul li {
+  margin-bottom: 8px;
+}
+
+.sidebar-block ul li a {
+  color: #555;
+  text-decoration: none;
+  font-size: 0.95em;
+  display: block;
+  padding: 5px 0;
+  transition: color 0.2s ease;
+}
+
+.sidebar-block ul li a:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .profile-avatar-area {
+    width: auto;
+  }
+
+  .profile-level {
+    align-items: center;
+  }
+
+  .edit-profile-button {
+    align-self: center;
+  }
+
+  .profile-main-content,
+  .profile-sidebar {
+    flex-basis: 100%;
+    min-width: unset;
+  }
+
+  .activity-section h3 span,
+  .sidebar-block h4 span {
+    float: none;
+    display: block;
+    text-align: center;
+    margin-top: 5px;
+  }
+}
