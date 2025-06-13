@@ -5,7 +5,7 @@
 
   <nav class="navbar-nav-links">
     <a routerLink="/home" routerLinkActive="active" class="nav-link">
-      <button class="profile-button">Inicio</button>
+      <button class="profile-button">Início</button>
     </a>
     <a routerLink="/perfil" routerLinkActive="active" class="nav-link profile-nav-link">
       <button class="profile-button">Perfil</button>
@@ -13,9 +13,6 @@
     <a routerLink="/planos" routerLinkActive="active" class="nav-link">
       <button class="profile-button">Planos</button>
     </a>
-    <button (click)="toggleTheme()" class="theme-button">
-        {{ isDarkMode ? 'Modo Claro' : 'Modo Escuro' }}
-    </button>
   </nav>
 
   <input type="text" placeholder="Escreva o nome do mangá" class="search-bar" />
