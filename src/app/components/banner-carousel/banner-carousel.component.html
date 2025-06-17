@@ -1,0 +1,25 @@
+<section class="destaque-carousel" *ngIf="destaques.length">
+  <div
+    class="destaque-slide"
+    *ngFor="let destaque of destaques; let i = index"
+    [class.active]="i === destaqueIndex"
+    [style.backgroundImage]="'url(' + destaque.imagem + ')'"
+  >
+    <div class="destaque-info">
+      <h2 class="destaque-titulo">{{ destaque.titulo }}</h2>
+      <p class="destaque-descricao">{{ destaque.descricao }}</p>
+      <button class="btn-leia" (click)="lerManga(destaque)">Leia agora</button>
+    </div>
+  </div>
+
+  <button class="seta left" (click)="anterior()">❮</button>
+  <button class="seta right" (click)="proximo()">❯</button>
+
+  <div class="indicadores">
+    <span
+      *ngFor="let manga of destaques; let idx = index"
+      [class.ativo]="idx === destaqueIndex"
+      (click)="irPara(idx)"
+    ></span>
+  </div>
+</section>
