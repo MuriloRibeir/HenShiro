@@ -4,11 +4,17 @@
 
   <section class="recomendacoes">
     <h2>Recomendações para Você</h2>
-    <div class="manga-grid">
-      <div class="manga-card" *ngFor="let manga of mangas">
-        <img [src]="manga.imagem" alt="{{ manga.titulo }}" />
-        <h3>{{ manga.titulo }}</h3>
+    <div class="carousel-container">
+      <button class="carousel-arrow left-arrow" (click)="scrollLeft()">&#10094;</button>
+      <div class="manga-grid-wrapper" #mangaGridWrapper>
+        <div class="manga-grid">
+          <div class="manga-card" *ngFor="let manga of mangas">
+            <img [src]="manga.imagem" alt="{{ manga.titulo }}" />
+            <h3>{{ manga.titulo }}</h3>
+            </div>
+        </div>
       </div>
+      <button class="carousel-arrow right-arrow" (click)="scrollRight()">&#10095;</button>
     </div>
   </section>
 </main>
