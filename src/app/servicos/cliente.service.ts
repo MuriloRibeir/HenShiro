@@ -19,4 +19,17 @@ private url:string = 'http://localhost:8080';
 selecionar():Observable<Cliente[]>{
   return this.http.get<Cliente[]>(this.url);
 }
+  //Método de cadastro do cliente
+  cadastrar(obj:Cliente):Observable <Cliente>{
+    return this.http.post<Cliente>(this.url, obj)
+  }
+  //Método de edição de cliente
+  editar(obj:Cliente):Observable <Cliente>{
+    return this.http.put<Cliente>(this.url, obj)}
+  
+  
+  //Método de remoção de cliente
+  remover(id:number):Observable<void>{
+    return this.http.delete<void>(this.url + '/' + id);
+  }
 }

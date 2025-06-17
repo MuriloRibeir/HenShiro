@@ -4,4 +4,5 @@ export class Cliente {
     email:string = '';
     plano:string = '';
     idade:number = 0;
+    senha:string = '';
 }

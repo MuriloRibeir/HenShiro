@@ -2,6 +2,7 @@
     title="Realize aqui seu cadastro"
     botaoPrimario="Cadastrar"
     botaoSecundario="Voltar"
+    (click)="cadastrar()"
     (submit)="submit()"
     (navigate)="navigate()"
     [disableBotaoPrimario]="!cadastroForm.valid"
@@ -12,6 +13,7 @@
             inputName="name"
             placeholder="Nome de Usuário"
             type="text"
+            name = "nome" [(ngModel)]="cliente.nome"
         >
         </app-input-primario>
 
@@ -20,6 +22,7 @@
             inputName="email"
             type="email"
             placeholder="E-mail"
+            name = "email" [(ngModel)]="cliente.email"
         >
         </app-input-primario>
 
@@ -28,6 +31,7 @@
             inputName="password"
             type="password"
             placeholder="Senha"
+            name = "senha"  [(ngModel)]="cliente.senha"
         >
         </app-input-primario>
 
@@ -44,12 +48,39 @@
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
+<br>
+
+<form (ngSubmit)="cadastrar()">
+  <input type="text" placeholder="Nome"   name="nome" [(ngModel)]="cliente.nome" class="form-control">
+  <input type="text" placeholder="Senha"  name="senha" [(ngModel)]="cliente.senha" class="form-control">
+  <input type="text" placeholder="E-mail" name="email" [(ngModel)]="cliente.email" class="form-control">
+  <input type="text" placeholder="Plano"  name="plano" [(ngModel)]="cliente.plano" class="form-control">
+  <input type="number" placeholder="Idade" name="idade" [(ngModel)]="cliente.idade" class="form-control">
+
+  <button type="submit" class="btn btn-primary">Cadastrar</button>
+  <input type="button" value="Alterar"   class="btn btn-warning" (click)="editar()">
+   <input type="button" value="remover"   class="btn btn-warning" (click)="remover()">
+</form>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
 <table class="table">
     <thead>
         <tr>
-            <th>#</th>
+            <th>#id</th>
             <th>Nome</th>
-            <th>Idade</th>
+            <th>Senha</th>
             <th>Email</th>
             <th>Plano</th>
             <th>Selecionar</th>
@@ -57,13 +88,13 @@
     </thead>
 
     <tbody>
-        <tr *ngFor="let c of clientes">
+        <tr *ngFor="let c of clientes, index as i">
             <td>{{c.id}}</td>
             <td>{{c.nome}}</td>
-            <td>{{c.idade}}</td>
+            <td>{{c.senha}}</td>
             <td>{{c.email}}</td>
             <td>{{c.plano}}</td>
-            <td></td>
+            <td><button class="btn btn-sucess" (click)="selecionarCliente(i)">Selecionar</button></td>
         </tr>
     </tbody>
 </table>

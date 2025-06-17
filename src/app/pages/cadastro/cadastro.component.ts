@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { DefaultLoginLayoutComponent } from '../../components/default-login-layout/default-login-layout.component';
-import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { InputPrimarioComponent } from '../../components/input-primario/input-primario.component';
 import { Router } from '@angular/router';
 import { LoginService } from '../../services/login.service';
@@ -8,6 +8,7 @@ import { ToastrService } from 'ngx-toastr';
 import { Cliente } from '../../modelo/Cliente';
 import { ClienteService } from '../../servicos/cliente.service';
 import { CommonModule } from '@angular/common';
+
 
    
 interface cadastroForm {
@@ -20,7 +21,7 @@ interface cadastroForm {
 @Component({
   selector: 'app-cadastro',
   standalone: true,
-  imports: [ DefaultLoginLayoutComponent, InputPrimarioComponent, ReactiveFormsModule, CommonModule],
+  imports: [ DefaultLoginLayoutComponent, InputPrimarioComponent, ReactiveFormsModule, CommonModule, FormsModule],
   providers:  [ LoginService, Cliente ],
   templateUrl: './cadastro.component.html',
   styleUrl: './cadastro.component.css'
@@ -28,6 +29,8 @@ interface cadastroForm {
 export class CadastroComponent {
   cadastroForm!: FormGroup<cadastroForm>;
 
+  //Objeto do tipo cliente
+  cliente = new Cliente();
    //Json dos clientes 
   clientes:Cliente[] = [];
 
@@ -60,8 +63,64 @@ export class CadastroComponent {
   selecionar():void{
     this.servico.selecionar().subscribe(retorno => this.clientes= retorno);
   }
+
+  //Método de cadastro
+  cadastrar():void{
+    this.servico.cadastrar(this.cliente).subscribe(retorno =>{this.clientes.push(retorno);});
+   
+    //limpa o campo
+      this.cliente = new Cliente();
+
+    //mensagem
+      alert('Usuario cadastrado');
+  }
+
+  //Método de seleçao de um cliente unico 
+  selecionarCliente(posicao:number):void{
+    //selecionar o cliente no array
+    this.cliente = this.clientes[posicao];
+  }
+
+  //Método para editar clientes
+  editar():void{
+    this.servico.editar(this.cliente).subscribe(retorno =>{
+      //Obter posição do array do cliente
+      let posicao = this.clientes.findIndex(obj =>{
+        return obj.id == retorno.id;
+      });
+      
+      //alterar os dados do cliente no array
+      this.clientes[posicao] = retorno;
+
+      //limpa o campo
+      this.cliente = new Cliente();
+
+      //mensagem
+      alert('Usuario editado');
+    })
+  }
+  //Método para DELETAR clientes
+  remover():void{
+    this.servico.remover(this.cliente.id).subscribe(retorno =>{
+      //Obter posição do array do cliente
+      let posicao = this.clientes.findIndex(obj =>{
+        return obj.id == this.cliente.id;
+      });
+      
+      //remover cliente do cliente no array
+      this.clientes.splice(posicao, 1)
+
+      //limpa o campo
+      this.cliente = new Cliente();
+
+      //mensagem
+      alert('Usuario removido');
+    })
+  }
+
   //Método de inicialização
   ngOnInit(){
     this.selecionar();
   }
+
 }
