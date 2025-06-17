@@ -44,7 +44,7 @@ export class PlanosComponent implements OnInit {
       },
       {
         nome: 'Premium <br> para Leitores',
-        precoMensal: 0,
+        precoMensal: 10.99,
         biblioteca: 'Total',
         resolucao: 'Alto',
         aparelhosCompativeis: 'TV, computador, celular, tablet',
@@ -54,7 +54,7 @@ export class PlanosComponent implements OnInit {
       },
       {
         nome: 'Premium <br> para Criadores',
-        precoMensal: 0,
+        precoMensal: 14.99,
         biblioteca: 'Total',
         resolucao: 'Alto',
         aparelhosCompativeis: 'TV, computador, celular, tablet',
