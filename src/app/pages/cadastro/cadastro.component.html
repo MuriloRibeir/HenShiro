@@ -40,3 +40,30 @@
         </app-input-primario>
     </form>
 </app-default-login-layout>
+<br>
+<br>
+<br>
+<br>
+<table class="table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Email</th>
+            <th>Plano</th>
+            <th>Selecionar</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let c of clientes">
+            <td>{{c.id}}</td>
+            <td>{{c.nome}}</td>
+            <td>{{c.idade}}</td>
+            <td>{{c.email}}</td>
+            <td>{{c.plano}}</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
