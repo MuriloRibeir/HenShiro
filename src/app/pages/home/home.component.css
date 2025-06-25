@@ -4,7 +4,7 @@
   background-color: #eeebe3;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
-  
+
 .recomendacoes {
   padding: 1rem;
   position: relative;
@@ -16,13 +16,13 @@
   font-size: 1.5em;
   text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
-  
+
 .manga-grid {
   display: inline-flex;
   gap: 20px;
   margin-top: 1rem; 
 }
-  
+
 .manga-card {
   background-color: #eeebe3;
   height: 350px;
@@ -45,7 +45,7 @@
   height: 100%;
   object-fit: cover;
 }
-  
+
 .manga-card h3 {
   position: absolute;
   bottom: 0;
@@ -59,7 +59,7 @@
   box-sizing: border-box;
   text-align: center;
 }
-  
+
 .manga-card button {
   background-color: #555;
   border: none;
@@ -122,4 +122,49 @@
 
 .right-arrow {
   right: 0;
+}
+
+/* ===== Correção para o modal PDF ===== */
+.pdf-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.6); /* Fundo escuro semi-transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Sobre tudo */
+}
+
+.pdf-modal-content {
+  position: relative;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.fechar-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ca0013;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.pdf-modal-content iframe {
+  width: 75vw;  
+  height: 600px; 
+  border: 1px solid #000;
+  border-radius: 8px;
+  display: block;
 }

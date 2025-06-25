@@ -2,20 +2,22 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 import { NavbarComponent } from "../../components/navbar/navbar.component";
 import { CommonModule } from '@angular/common';
 import { BannerCarouselComponent } from '../../components/banner-carousel/banner-carousel.component';
+import { SafeUrlPipe } from '../pipes/safe-url.pipe'; 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NavbarComponent, BannerCarouselComponent,CommonModule],
+  imports: [NavbarComponent, BannerCarouselComponent, CommonModule, SafeUrlPipe],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrls: ['./home.component.css']
 })
-
 export class HomeComponent {
 
   @ViewChild('mangaGridWrapper') mangaGridWrapper!: ElementRef<HTMLDivElement>;
 
-    destaques = [
+  pdfUrl: string | null = null;
+
+  destaques = [
     {
       titulo: 'Jujutsu Kaisen',
       descricao: 'Em um mundo onde maldições ameaçam a humanidade, Itadori luta para proteger seus amigos.',
@@ -29,15 +31,15 @@ export class HomeComponent {
   ];
 
   mangas = [
-    { titulo: 'Naruto', imagem: 'naruto-cover.jpeg' },
-    { titulo: 'One Piece', imagem: 'one-piece-cover.jpeg' },
-    { titulo: 'Bleach', imagem: 'bleach-cover.jpeg' },
-    { titulo: 'Jujutsu Kaisen', imagem: 'jujutsu-kaisen-cover.jpeg' },
-    { titulo: 'Attack on Titan', imagem: 'aot-cover.jpeg' },
-    { titulo: 'Death Note', imagem: 'death-note-cover.jpeg' },
-    { titulo: 'JoJo', imagem: 'jojo-cover.jpeg' }
+    { titulo: 'Naruto', imagem: 'naruto-cover.jpeg', pdf: 'naruto' },
+    { titulo: 'One Piece', imagem: 'one-piece-cover.jpeg', pdf: 'one-piece' },
+    { titulo: 'Bleach', imagem: 'bleach-cover.jpeg', pdf: 'bleach' },
+    { titulo: 'Jujutsu Kaisen', imagem: 'jujutsu-kaisen-cover.jpeg', pdf: 'jujutsu-kaisen' },
+    { titulo: 'Attack on Titan', imagem: 'aot-cover.jpeg', pdf: 'aot' },
+    { titulo: 'Death Note', imagem: 'death-note-cover.jpeg', pdf: 'death-note' },
+    { titulo: 'JoJo', imagem: 'jojo-cover.jpeg', pdf: 'jojo' }
   ];
-  
+
   scrollAmount: number = 300;
 
   scrollLeft(): void {
@@ -56,5 +58,15 @@ export class HomeComponent {
         behavior: 'smooth'
       });
     }
+  }
+
+  abrirManga(nomePdf: string): void {
+    this.pdfUrl = `pdf/${nomePdf}.pdf#toolbar=0&navpanes=0&scrollbar=0&zoom=90`;
+    document.body.style.overflow = 'hidden'; // bloqueia scroll da página
+  }
+
+  fecharManga(): void {
+    this.pdfUrl = null;
+    document.body.style.overflow = 'auto'; // libera scroll da página
   }
 }
