@@ -2,12 +2,13 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 import { NavbarComponent } from "../../components/navbar/navbar.component";
 import { CommonModule } from '@angular/common';
 import { BannerCarouselComponent } from '../../components/banner-carousel/banner-carousel.component';
-import { SafeUrlPipe } from '../pipes/safe-url.pipe'; 
+import { SafeUrlPipe } from '../pipes/safe-url.pipe';
+import { FooterComponent } from "../../components/footer/footer.component"; 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NavbarComponent, BannerCarouselComponent, CommonModule, SafeUrlPipe],
+  imports: [NavbarComponent, BannerCarouselComponent, CommonModule, SafeUrlPipe, FooterComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
