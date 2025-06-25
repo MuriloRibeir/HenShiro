@@ -45,19 +45,19 @@ export class PerfilComponent implements OnInit {
           titulo: 'One Piece',
           tempo: '15 capítulos lidos',
           ultimaVez: 'Lido em 10 de jun.',
-          capaUrl: 'one-piece-cover.jpeg'
+          capaUrl: 'img/one-piece-cover.jpeg'
         },
         {
           titulo: 'Naruto',
           tempo: '5 horas de leitura',
           ultimaVez: 'Lido em 9 de jun.',
-          capaUrl: 'naruto-cover.jpeg'
+          capaUrl: 'img/naruto-cover.jpeg'
         },
         {
           titulo: 'Berserk',
           tempo: '3 capítulos lidos',
           ultimaVez: 'Lido em 8 de jun.',
-          capaUrl: 'berserk-cover.jpeg'
+          capaUrl: 'img/berserk-cover.jpeg'
         }
       ],
       statusOnline: true,
